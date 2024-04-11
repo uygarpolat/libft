@@ -6,16 +6,11 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 02:26:22 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/11 02:17:01 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/12 00:54:16 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-int		ft_strlen(char *str);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strchr(const char *str, int c);
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -28,6 +23,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		len--;
 	return ((char *) ft_substr(s1, 0, len));
 }
+/*
+#include <stdio.h>
 
 int	main(int argc, char**argv)
 {
@@ -35,3 +32,4 @@ int	main(int argc, char**argv)
 		printf("%s\n", ft_strtrim(argv[1], argv[2]));
 	return (0);
 }
+*/

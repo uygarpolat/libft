@@ -6,11 +6,13 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 22:49:24 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/07 22:58:14 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/13 16:25:17 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -24,7 +26,7 @@ int	ft_strlen(char *str)
 
 int	main(void)
 {
-	printf("%d", ft_strlen("Hello!"));
+	printf("%zu", ft_strlen("Hello!"));
 	return (0);
 }
 */

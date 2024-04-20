@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 16:02:43 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/16 16:30:49 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/20 19:52:23 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	needle_len = ft_strlen(needle);
 	if (needle_len == 0)
 		return ((char *)temp_haystack);
-	while (*haystack && (len--) - needle_len + 1)
+	while (*haystack && (len--) + 1 > needle_len)
 	{
 		j = 0;
 		while (!ft_strncmp(haystack, &needle[j], 1))
@@ -44,7 +44,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 int main(void)
 {
-	printf("%s\n", ft_strnstr("12345678901234567890", "89", 9));
+	//printf("%s\n", ft_strnstr("12345678901234567890", "89", 9));
+	printf("%s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 0));
+	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0));
 	return (0);
 }
 */

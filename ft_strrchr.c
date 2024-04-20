@@ -6,26 +6,24 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 02:20:54 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/16 16:06:52 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/20 16:19:29 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strrchr(const char *str, int c)
 {
-	int	temp;
-	int	i;
+	int	len;
 
-	temp = 0;
-	i = 0;
-	while (str[i])
+	len = ft_strlen(str);
+	while (len >= 0)
 	{
-		if (str[i] == c)
-			temp = i;
-		i++;
+		if (str[len] == c % 256)
+			return ((char *)&str[len]);
+		len--;
 	}
-	if (temp == 0 && str[0] != c)
-		return (0);
-	return ((char *)&str[temp]);
+	return (0);
 }
 /*
 #include <string.h>

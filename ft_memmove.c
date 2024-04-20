@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 01:31:12 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/19 16:51:26 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/20 14:05:01 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	chardst = (char *)dst;
 	charsrc = (const char *)src;
-	if (chardst > charsrc && chardst < charsrc + len)
+	if (chardst > charsrc)
 	{
 		i = len;
 		while (i > 0)

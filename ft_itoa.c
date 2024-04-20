@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 01:01:52 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/12 02:59:59 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/20 18:52:49 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	ft_putnbr(char *str, int n)
 		n = -n;
 		ft_strcharcat(str, '-');
 	}
-	if (n > 10)
+	if (n >= 10)
 	{
 		ft_putnbr(str, n / 10);
 		ft_putnbr(str, n % 10);
@@ -92,7 +92,7 @@ int	main(void)
 	char	*str;
 	int		nbr;
 
-	nbr = -2147483648;
+	nbr = 10000034;
 	str = ft_itoa(nbr);
 	printf("%s\n", ft_itoa(nbr));
 	free(str);

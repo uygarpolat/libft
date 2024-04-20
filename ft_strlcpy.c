@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 18:05:28 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/17 11:32:09 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/20 13:32:23 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ size_t	ft_strlcpy(char *destination, const char *source, size_t size)
 		destination[i] = source[i];
 		i++;
 	}
-	destination[i] = '\0';
+	if (size > 0)
+		destination[i] = '\0';
 	return (counter);
 }
 /*
@@ -49,5 +50,10 @@ int	main(void)
 	len2 = ft_strlcpy(dest2, source2, size2);
 	printf("for    strlcpy, dest is %s and return value is %zu\n", dest1, len1);
 	printf("for ft_strlcpy, dest is %s and return value is %zu\n", dest2, len2);
+
+	char src[] = "coucou";
+	char dest[10]; memset(dest, 'A', 10);
+	printf("%d\n", ft_strlcpy(dest, src, 0) == strlen(src) && dest[0] == 'A');
+	printf("%s\n", dest);
 }
 */

@@ -5,14 +5,21 @@
 #                                                     +:+ +:+         +:+      #
 #    By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/18 20:59:00 by upolat            #+#    #+#              #
-#    Updated: 2024/04/19 16:40:38 by upolat           ###   ########.fr        #
+#    Created: 2024/04/19 21:35:28 by upolat            #+#    #+#              #
+#    Updated: 2024/04/19 21:59:57 by upolat           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
 
-SOURCES = ./ft_atoi.c \
+CC		= gcc
+CFLAGS	= -Wall -Wextra -Werror
+LIB1	= ar -rcs
+LIB2	= ranlib
+RM		= rm -f
+
+NAME	= libft.a
+
+SRCS = ./ft_atoi.c \
 		  ./ft_putstr_fd.c \
 		  ./ft_strrchr.c \
 		  ./ft_bzero.c \
@@ -48,9 +55,9 @@ SOURCES = ./ft_atoi.c \
 		  ./ft_putnbr_fd.c \
 		  ./ft_strnstr.c \
 
-OBJECTS = $(SOURCES:.c=.o)
+OBJS	= $(SRCS:.c=.o)
 
-BONUS = ./ft_lstnew_bonus.c \
+BONUS_S = ./ft_lstnew_bonus.c \
 		./ft_lstadd_front_bonus.c \
 		./ft_lstsize_bonus.c \
 		./ft_lstlast_bonus.c \
@@ -60,24 +67,29 @@ BONUS = ./ft_lstnew_bonus.c \
 		./ft_lstiter_bonus.c \
 		./ft_lstmap_bonus.c \
 
-BONUS_OBJS =  $(BONUS:.c=.o)
+BONUS_O	= $(BONUS_S:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror
+all:		$(NAME)
 
-all: $(NAME)
+$(NAME):	$(OBJS) $(INCLUDE)
+			$(LIB1) $(NAME) $(OBJS)
+			$(LIB2) $(NAME)
 
-$(NAME): $(OBJECTS)
-	ar rcs $(NAME) $(OBJECTS)
+bonus:		$(NAME) $(BONUS_O)
+			$(LIB1) $(NAME) $(BONUS_O)
+			$(LIB2) $(NAME)
 
-%.o: %.c
-	cc $(CFLAGS) -c $^ -o $@
+.c.o:
+			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 clean:
-	rm -f $(OBJECTS) 
+			$(RM) $(OBJS) $(BONUS_O)
 
-fclean: clean
-	rm -f $(NAME)
+fclean:		clean
+			$(RM) $(NAME)
 
-re: fclean all
+re:			fclean all
 
-.PHONY: all clean fclean re
+rebonus:	fclean bonus
+
+.PHONY:		all clean fclean re bonus rebonus

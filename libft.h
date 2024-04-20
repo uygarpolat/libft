@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 22:44:36 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/19 15:22:41 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/20 13:04:30 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ char			*ft_strrchr(const char *str, int c);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
-char			*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char			*ft_strnstr(const char *haystack,
+					const char *needle, size_t len);
 int				ft_atoi(const char *str);
 
 void			*ft_calloc(size_t count, size_t size);

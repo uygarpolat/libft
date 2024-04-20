@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 23:26:45 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/19 15:12:34 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/21 01:33:43 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, "-", 1);
 		n = -n;
 	}
-	if (n > 10 && n != -2147483648)
+	if (n >= 10 && n != -2147483648)
 	{
 		ft_putnbr_fd(n / 10, 1);
 		ft_putnbr_fd(n % 10, 1);
@@ -37,7 +37,7 @@ void	ft_putnbr_fd(int n, int fd)
 /*
 int main(void)
 {
-	ft_putnbr_fd(2147483648, 1);
+	ft_putnbr_fd(-57, 1);
 	return (0);
 }
 */

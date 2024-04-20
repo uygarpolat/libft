@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 02:20:08 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/19 14:59:43 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/20 21:14:57 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ char	**ft_split(char const *s, char c)
 	counter = ft_word_amount_checker(s, c);
 	str = malloc(sizeof(char *) * (counter + 1));
 	if (str == NULL)
-		return (NULL);
+		return (0);
 	i = 0;
 	h = 0;
 	while (i < counter)
@@ -146,6 +146,14 @@ int	main(int argc, char **argv)
 			i++;
 		}
 	}
+	char * * tab2 = ft_split("", ' ');
+	printf("%s\n", tab2[0]);
+	char * * tab = ft_split("  tripouille  42  ", ' ');
+	mcheck(tab, sizeof(char *) * 7);
+	char * invalidReadCheck = malloc(sizeof(char));
+	*invalidReadCheck = 0;
+	char **tab = ft_split(invalidReadCheck, 0);
+	printf("%d\n", tab[0] == NULL);
 	return (0);
 }
 */

@@ -6,13 +6,13 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:26:30 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/19 15:26:38 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/20 13:36:20 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newlist;
 	t_list	*temp;
@@ -31,8 +31,9 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
 			return (NULL);
 		}
 		newlist->content = (*f)(lst->content);
+		(*del)(lst->content);
 		lst = lst->next;
 		newlist = newlist->next;
 	}
-	return(newlist);
+	return (newlist);
 }

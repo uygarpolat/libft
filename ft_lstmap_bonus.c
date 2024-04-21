@@ -6,11 +6,23 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:26:30 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/21 21:20:47 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 00:00:21 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	retrospective_deletion(t_list *newlist,
+	t_list *temp, void (*del)(void *))
+{
+	while (newlist != NULL)
+	{
+		temp = newlist->next;
+		(*del)(newlist->content);
+		free(newlist);
+		newlist = temp;
+	}
+}
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -25,13 +37,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		newnode = malloc(sizeof(t_list));
 		if (newnode == NULL)
 		{
-			while (newlist != NULL)
-			{
-				temp = newlist->next;
-				(*del)(newlist->content);
-				free(newlist);
-				newlist = temp;
-			}
+			retrospective_deletion(newlist, temp, del);
 			return (NULL);
 		}
 		newnode->content = (*f)(lst->content);

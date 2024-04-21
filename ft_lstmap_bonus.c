@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:26:30 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/21 21:17:10 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/21 21:20:47 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (newnode == NULL)
 		{
 			while (newlist != NULL)
-			:{
+			{
 				temp = newlist->next;
 				(*del)(newlist->content);
 				free(newlist);

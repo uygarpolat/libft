@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 02:20:08 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/20 21:14:57 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 01:19:06 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,14 +146,6 @@ int	main(int argc, char **argv)
 			i++;
 		}
 	}
-	char * * tab2 = ft_split("", ' ');
-	printf("%s\n", tab2[0]);
-	char * * tab = ft_split("  tripouille  42  ", ' ');
-	mcheck(tab, sizeof(char *) * 7);
-	char * invalidReadCheck = malloc(sizeof(char));
-	*invalidReadCheck = 0;
-	char **tab = ft_split(invalidReadCheck, 0);
-	printf("%d\n", tab[0] == NULL);
 	return (0);
 }
 */

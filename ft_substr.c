@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 01:04:03 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/21 14:24:27 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 00:27:25 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	sublen = 0;
 	if (start >= ft_strlen(s))
-		sublen = ft_strlen(s) - 1;
+		start = ft_strlen(s);
 	while (s[start] != '\0' && sublen < len)
 	{
 		start++;
@@ -46,11 +46,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 int	main(void)
 {
-	//printf("%s\n", ft_substr("Hello World!", 15, 11));
+	printf("%s\n", ft_substr("Hello World!", 15, 11));
 	char *s = ft_substr("tripouille", 100, 1);
 	printf("%d|", !strcmp(s, ""));
 	char *s2 = ft_substr("tripouille", 0, 42000);
 	printf("%d\n", !strcmp(s2, "tripouille"));
+	printf("%s\n", ft_substr("01234", 10, 10));
 	return (0);
 }
 */

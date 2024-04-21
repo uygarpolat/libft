@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 02:00:24 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/20 16:04:48 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 00:59:39 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,15 @@ char	*ft_strchr(const char *str, int c)
 {
 	while (*str)
 	{
-		if (*str == c % 256)
+		if (*str == (char)c)
 			return ((char *)str);
 		str++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)str);
 	return (NULL);
 }
+
 /*
 #include <string.h>
 #include <stdio.h>
@@ -35,6 +36,7 @@ int	main(void)
 	printf("%d|", strchr(s, 't' + 512) == s);
 	printf("%d\n", ft_strchr(s, 't' + 512) == s);
 	printf("%c\n", 't' + 512);
+	printf("%s\n", ft_strchr("teste", '\0'));
 	return (0);
 }
 */

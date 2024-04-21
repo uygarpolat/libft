@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:25:08 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/19 15:25:16 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/21 14:52:10 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,14 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list	*temp;
 
 	temp = *lst;
-	while (temp->next != NULL)
-		temp = temp->next;
-	temp->next = new;
+	if (*lst == NULL)
+		*lst = new;
+	else
+	{
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = new;
+	}
 }
 /*
 #include <stdio.h>

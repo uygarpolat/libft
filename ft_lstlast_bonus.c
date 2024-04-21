@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:24:42 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/19 15:24:51 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/21 13:24:34 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstlast(t_list *lst)
 	t_list	*temp;
 
 	temp = lst;
+	if (temp == NULL)
+		return (NULL);
 	while (temp->next != NULL)
 		temp = temp->next;
 	return (temp);

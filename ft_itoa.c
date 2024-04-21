@@ -6,13 +6,13 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 01:01:52 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/20 18:52:49 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/21 15:26:16 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_digit_counter(int n)
+static int	ft_digit_counter(int n)
 {
 	int		digit;
 
@@ -33,7 +33,7 @@ int	ft_digit_counter(int n)
 	return (digit);
 }
 
-void	ft_strcharcat(char *str, char c)
+static void	ft_strcharcat(char *str, char c)
 {
 	int	i;
 
@@ -44,7 +44,7 @@ void	ft_strcharcat(char *str, char c)
 	str[i + 1] = '\0';
 }
 
-void	ft_putnbr(char *str, int n)
+static void	ft_putnbr(char *str, int n)
 {
 	char	c;
 

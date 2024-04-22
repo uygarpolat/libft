@@ -6,21 +6,21 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 02:20:08 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 01:19:06 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 12:53:50 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_word_amount_checker(char const *str, int c)
+static int	ft_word_amount_checker(char const *str, int c, int flag)
 {
 	int	counter;
-	int	flag;
 
+	if (!*str)
+		return (0);
 	counter = 0;
 	if (str[0] != c)
 		counter = 1;
-	flag = 0;
 	while (*str)
 	{
 		while (*str == c)
@@ -54,7 +54,7 @@ static void	copy_characters(char *s, const char *str, int i, int counter)
 	}
 }
 
-static char	*ft_word_length_checker(char const *str, int c, int i, int counter)
+static char	*ft_word_length_checker(char const *str, char c, int i, int counter)
 {
 	int		flag;
 	char	*s;
@@ -62,7 +62,7 @@ static char	*ft_word_length_checker(char const *str, int c, int i, int counter)
 	flag = 0;
 	while (str[i] != '\0')
 	{
-		while (str[i] != c)
+		while (str[i] && str[i] != c)
 		{
 			flag = 1;
 			counter++;
@@ -112,7 +112,7 @@ char	**ft_split(char const *s, char c)
 	int		counter;
 	char	**str;
 
-	counter = ft_word_amount_checker(s, c);
+	counter = ft_word_amount_checker(s, c, 0);
 	str = malloc(sizeof(char *) * (counter + 1));
 	if (str == NULL)
 		return (0);
@@ -128,6 +128,7 @@ char	**ft_split(char const *s, char c)
 	str[i] = 0;
 	return (str);
 }
+
 /*
 #include <stdio.h>
 
@@ -145,6 +146,8 @@ int	main(int argc, char **argv)
 			printf("Word %d: %s\n", i + 1, str[i]);
 			i++;
 		}
+
+		printf("%d\n", str[0] == NULL);
 	}
 	return (0);
 }

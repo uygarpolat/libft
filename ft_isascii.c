@@ -6,11 +6,9 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 21:40:50 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/16 12:33:30 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 08:47:08 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {

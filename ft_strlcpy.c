@@ -6,11 +6,11 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 18:05:28 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/20 13:32:23 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 08:52:05 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *destination, const char *source, size_t size)
 {

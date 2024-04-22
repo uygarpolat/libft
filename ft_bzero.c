@@ -6,11 +6,11 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 00:26:29 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/16 15:55:52 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 08:49:26 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

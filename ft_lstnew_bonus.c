@@ -6,11 +6,10 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:27:17 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/19 15:22:56 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 09:07:42 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)

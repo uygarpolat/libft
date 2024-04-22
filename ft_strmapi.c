@@ -6,11 +6,10 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:25:02 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/18 17:32:15 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 09:04:40 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

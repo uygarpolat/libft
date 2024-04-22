@@ -6,12 +6,11 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:25:33 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/19 15:25:39 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 09:08:55 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

@@ -6,11 +6,9 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 19:50:12 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/16 12:32:55 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 08:46:22 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {

@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 02:20:54 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/20 16:19:29 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 08:58:06 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *str, int c)
 	len = ft_strlen(str);
 	while (len >= 0)
 	{
-		if (str[len] == c % 256)
+		if (str[len] == (char)c)
 			return ((char *)&str[len]);
 		len--;
 	}

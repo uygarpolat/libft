@@ -6,11 +6,9 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 23:20:49 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/16 12:32:38 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 08:46:04 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {

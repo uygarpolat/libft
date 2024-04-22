@@ -6,11 +6,10 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 01:51:33 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/20 13:35:01 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 09:02:05 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

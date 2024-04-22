@@ -6,11 +6,9 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 02:00:24 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 00:59:39 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 08:57:40 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -22,7 +20,7 @@ char	*ft_strchr(const char *str, int c)
 	}
 	if ((char)c == '\0')
 		return ((char *)str);
-	return (NULL);
+	return (0);
 }
 
 /*

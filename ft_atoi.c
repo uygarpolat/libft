@@ -6,24 +6,28 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 23:04:19 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 16:15:37 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 22:51:23 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+static int	ft_isspace(const char c)
+{
+	if (c == ' ' || (c >= 9 && c <= 13))
+		return (1);
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	sign;
-	int	nbr;
+	int		sign;
+	long	nbr;
 
 	sign = 1;
 	nbr = 0;
-	while (*str)
-	{
-		if (*str == ' ' || (*str >= 9 && *str <= 13))
-			str++;
-		else
-			break ;
-	}
+	while (ft_isspace(*str))
+		str++;
 	if (*str == '-')
 	{
 		sign = -sign;
@@ -33,6 +37,10 @@ int	ft_atoi(const char *str)
 		str++;
 	while (*str >= '0' && *str <= '9')
 	{
+		if (sign == 1 && (nbr > (LONG_MAX - (*str - '0')) / 10))
+			return (-1);
+		else if (sign == -1 && (-nbr < (LONG_MIN + (*str - '0')) / 10))
+			return (0);
 		nbr = nbr * 10 + *str - '0';
 		str++;
 	}
@@ -46,7 +54,8 @@ int	main(int argc, char **argv)
 {
 	if (argc == 2)
 	{	
-		printf("%d|%d\n", atoi(argv[1]), ft_atoi(argv[1]));
+		printf("   atoi returns: %d\nft_atoi returns: %d\n",
+			atoi(argv[1]), ft_atoi(argv[1]));
 		return (0);
 	}
 }

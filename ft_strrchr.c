@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 02:20:54 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 08:58:06 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/22 23:14:33 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ char	*ft_strrchr(const char *str, int c)
 
 int	main(void)
 {
-	printf("%s-%s\n", strrchr("abcdefgcdef", 'a'),
-		ft_strrchr("abcdefgcdef", 'a'));
+	printf("   strrchr returns: %s\nft_strrchr returns: %s\n",
+		strrchr("abcdefgcdef", 'a'),ft_strrchr("abcdefgcdef", 'a'));
 	return (0);
 }
 */

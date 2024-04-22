@@ -6,7 +6,7 @@
 #    By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/19 21:35:28 by upolat            #+#    #+#              #
-#    Updated: 2024/04/22 12:53:45 by upolat           ###   ########.fr        #
+#    Updated: 2024/04/22 15:51:28 by upolat           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,11 +67,13 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS) $(INCLUDE)
 			ar -rcs $(NAME) $(OBJS)
-			ranlib $(NAME)
 
-bonus:		$(BONUS_OBJS) $(INCLUDE)
+bonus: .bonus
+
+.bonus:		$(NAME) $(BONUS_OBJS) $(INCLUDE)
 			ar -rcs $(NAME) $(BONUS_OBJS)
-			ranlib $(NAME)
+			touch .bonus
+
 
 .c.o:
 			cc -Wall -Werror -Wextra -c $< -o $(<:.c=.o)

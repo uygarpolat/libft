@@ -39,6 +39,7 @@ void tester_ft_isascii()
 
 void tester_ft_isprint()
 {
+			printf("Test results for ft_isprint\n");
 		int	i;
 
 	i = 0;
@@ -93,6 +94,7 @@ void tester_ft_memmove()
 
 void tester_ft_strlcpy()
 {
+	printf("Test results for ft_strlcpy:\n");
 		char			source1[6] = "Hello";
 	char			dest1[6];
 	size_t			len1;
@@ -118,6 +120,7 @@ void tester_ft_strlcpy()
 
 void tester_ft_strlcat()
 {
+	printf("Test results for ft_strlcat:\n");
 		char	str1[15] = "Hello ";
 	char	str2[15] = "Hello ";
 
@@ -162,16 +165,19 @@ void tester_ft_strlcat()
 
 void tester_ft_toupper()
 {
+	printf("Test results for ft_toupper:\n");
 	printf("%c-%c\n", toupper('d'), ft_toupper('d'));	
 }
 
 void tester_ft_tolower()
 {
+	printf("Test results for ft_tolower:\n");
 	printf("%c-%c\n", tolower('D'), ft_tolower('D'));
 }
 
 void tester_ft_strchr()
 {
+	printf("Test results for ft_strchr:\n");
 		char s[] = "tripouille";
 	printf("%s|%s\n", strchr("abc", '\0'), ft_strchr("abc", '\0'));
 	printf("%d|", strchr(s, 't' + 512) == s);
@@ -182,12 +188,14 @@ void tester_ft_strchr()
 
 void tester_ft_strrchr()
 {
+	printf("Test results for ft_strrchr:\n");
 	printf("   strrchr returns: %s\nft_strrchr returns: %s\n",
 		strrchr("abcdefgcdef", 'a'),ft_strrchr("abcdefgcdef", 'a'));	
 }
 
 void tester_ft_strncmp()
 {
+	printf("Test results for ft_strncmp:\n");
 		printf("%d|%d\n", strncmp("Whynot", "Why",
 		6), ft_strncmp("Whynot", "Why", 6));
 	printf("%d|%d\n",strncmp("test\200", "test\0", 6),
@@ -197,6 +205,7 @@ void tester_ft_strncmp()
 
 void tester_ft_memchr()
 {
+	printf("Test results for ft_memchr:\n");
 	int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
     printf("%s|", (char *)memchr(tab, -1, 7));
     printf("%s\n", (char *)ft_memchr(tab, -1, 7));	
@@ -204,6 +213,7 @@ void tester_ft_memchr()
 
 void tester_ft_memcmp()
 {
+	printf("Test results for ft_memcmp:\n");
 	char s[] = {-128, 0, 127, 0};
 	char s2[] = {0, 0, 127, 0};
 	printf("%d|", memcmp(s, s2, 1));
@@ -215,6 +225,7 @@ void tester_ft_memcmp()
 
 void tester_ft_strnstr()
 {
+	printf("Test results for ft_strnstr:\n");
 	printf("%s\n", ft_strnstr("12345678901234567890", "89", 8));
 	printf("%s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 0));
 	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0));	
@@ -222,6 +233,7 @@ void tester_ft_strnstr()
 
 void tester_ft_atoi(int argc, char**argv)
 {
+	printf("Test results for ft_atoi:\n");
 	if (argc == 2)
 	{	
 		printf("   atoi returns: %d\nft_atoi returns: %d\n",
@@ -231,6 +243,7 @@ void tester_ft_atoi(int argc, char**argv)
 
 void tester_ft_calloc()
 {
+	printf("Test results for ft_calloc:\n");
     // Define the number of elements and size of each element
     size_t num_elements = 5;
     size_t element_size = sizeof(int);
@@ -266,6 +279,7 @@ void tester_ft_calloc()
 void tester_ft_strdup(int argc, char **argv)
 
 {
+	printf("Test results for ft_strdup:\n");
 	char	*str;
 	char	*str_dup;
 	char	*ft_str_dup;
@@ -283,6 +297,7 @@ void tester_ft_strdup(int argc, char **argv)
 
 void tester_ft_substr()
 {
+	printf("Test results for ft_substr:\n");
 		printf("%s\n", ft_substr("Hello World!", 15, 11));
 	char *s = ft_substr("tripouille", 100, 1);
 	printf("%d|", !strcmp(s, ""));
@@ -293,109 +308,21 @@ void tester_ft_substr()
 
 void tester_ft_strjoin(int argc, char **argv)
 {
+	printf("Test results for ft_strjoin:\n");
 	if (argc == 3)
 		printf("%s\n", ft_strjoin(argv[1], argv[2]));
 }
 
 void tester_ft_strtrim(int argc, char **argv)
 {
+	printf("Test results for ft_strtrim:\n");
 		if (argc == 3)
 			printf("%s\n", ft_strtrim(argv[1], argv[2]));
 }
 
-static int	ft_word_amount_checker(char const *str, int c, int flag)
-{
-	int	counter;
-
-	if (!*str)
-		return (0);
-	counter = 0;
-	if (str[0] != c)
-		counter = 1;
-	while (*str)
-	{
-		while (*str == c)
-		{
-			str++;
-			flag = 1;
-		}
-		if (flag == 1)
-		{
-			if (!*str)
-				break ;
-			flag = 0;
-			counter++;
-			str--;
-		}
-		str++;
-	}
-	return (counter);
-}
-
-static void	copy_characters(char *s, const char *str, int i, int counter)
-{
-	int	flag;
-
-	flag = 0;
-	while (flag < counter)
-	{
-		s[flag] = str[i - counter];
-		i++;
-		flag++;
-	}
-}
-
-static char	*ft_word_length_checker(char const *str, char c, int i, int counter)
-{
-	int		flag;
-	char	*s;
-
-	flag = 0;
-	while (str[i] != '\0')
-	{
-		while (str[i] && str[i] != c)
-		{
-			flag = 1;
-			counter++;
-			i++;
-		}
-		if (flag == 1)
-			break ;
-		i++;
-	}
-	s = malloc(sizeof(char) * (counter + 1));
-	if (s == NULL)
-		return (NULL);
-	flag = 0;
-	copy_characters(s, str, i, counter);
-	s[counter] = '\0';
-	return (s);
-}
-
-static int	ft_strlen_mod(char const *str, char c, int i)
-{
-	int	len;
-	int	flag;
-
-	len = 0;
-	flag = 1;
-	while (str[i] != '\0')
-	{
-		if (str[i] != c)
-		{
-			flag = 0;
-			len++;
-		}
-		else if (flag == 0)
-			break ;
-		else
-			len++;
-		i++;
-	}
-	return (len);
-}
 void tester_ft_split(int argc, char **argv)
 {
+	printf("Test results for ft_split:\n");
 	int		i;
 	char	**str;
 
@@ -413,67 +340,9 @@ void tester_ft_split(int argc, char **argv)
 	}
 }
 
-	static int	ft_digit_counter(int n)
-{
-	int		digit;
-
-	if (n == -2147483648)
-		return (11);
-	if (n < 0)
-	{
-		digit = 2;
-		n = -n;
-	}
-	else
-		digit = 1;
-	while (n > 9)
-	{
-		digit++;
-		n = n / 10;
-	}
-	return (digit);
-}
-
-static void	ft_strcharcat(char *str, char c)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	str[i] = c;
-	str[i + 1] = '\0';
-}
-
-static void	ft_putnbr(char *str, int n)
-{
-	char	c;
-
-	if (n == -2147483648)
-	{
-		ft_strcharcat(str, '-');
-		ft_strcharcat(str, '2');
-		n = 147483648;
-	}
-	else if (n < 0)
-	{
-		n = -n;
-		ft_strcharcat(str, '-');
-	}
-	if (n >= 10)
-	{
-		ft_putnbr(str, n / 10);
-		ft_putnbr(str, n % 10);
-	}
-	else
-	{
-		c = n + '0';
-		ft_strcharcat(str, c);
-	}
-}
-
 void tester_ft_itoa()
 {
+	printf("Test results for ft_itoa:\n");
 	char	*str;
 	int		nbr;
 
@@ -491,7 +360,7 @@ char	increase_char(unsigned int i, char c)
 }
 void tester_ft_strmapi()
 {
-
+	printf("Test results for ft_strmapi:\n");
 		char	input[] = "Hello, World!";
 	char	*result;
 	
@@ -511,6 +380,7 @@ void tester_ft_strmapi()
 	}
 void tester_ft_striteri(int argc, char **argv)
 {
+	printf("Test results for ft_striteri:\n");
 	if (argc == 2)
 	{
 		ft_striteri(argv[1], ft_write);
@@ -524,12 +394,14 @@ void tester_ft_putchar_fd()
 
 void tester_ft_putstr_fd(int argc, char **argv)
 {
+	printf("Test results for ft_putstr_fd:\n");
 	if (argc == 2)
 		ft_putstr_fd(argv[1], 1);	
 }
 
 void tester_ft_putendl_fd(int argc, char **argv)
 {
+	printf("Test results for ft_putendl_fd\n");
 	if (argc == 2)
 		ft_putendl_fd(argv[1], 1);
 
@@ -537,11 +409,13 @@ void tester_ft_putendl_fd(int argc, char **argv)
 
 void tester_ft_putnbr_fd()
 {
+	printf("Test results for ft_putnbr_fd:\n");
 	ft_putnbr_fd(-57, 1);	
 }
 
 void tester_ft_lstnew()
 {
+	printf("Test results for ft_lstnew:\n");
 	t_list *mylist = ft_lstnew("context");
 	char* str = (char *)(mylist->content);
 	printf("%s\n", str);	
@@ -549,6 +423,7 @@ void tester_ft_lstnew()
 
 void tester_ft_lstadd_front()
 {
+	printf("Test results for ft_lstadd_front:\n");
 	t_list **mylist;
 	t_list *mylist2 = ft_lstnew("context");
 	t_list *mylist3 = ft_lstnew("out of ");
@@ -562,6 +437,7 @@ void tester_ft_lstadd_front()
 
 void tester_ft_lstsize()
 {
+	printf("Test results for ft_lstsize:\n");
 	t_list **mylist;
 	t_list *mylist2 = ft_lstnew("out of ");
 	t_list *mylist3 = ft_lstnew("context ");
@@ -581,6 +457,7 @@ void tester_ft_lstsize()
 
 void tester_ft_lstlast()
 {
+	printf("Test results for ft_lstlast:\n");
 	t_list **mylist;
 	t_list *mylist2 = ft_lstnew("out of ");
 	t_list *mylist3 = ft_lstnew("context ");
@@ -601,6 +478,7 @@ void tester_ft_lstlast()
 
 void tester_ft_lstadd_back()
 {
+	printf("Test results for ft_lstadd_back:\n");
 	t_list **mylist;
 	t_list *mylist2 = ft_lstnew("out of ");
 	t_list *mylist3 = ft_lstnew("context ");
@@ -629,7 +507,7 @@ static void	del(void* content)
 	}
 void tester_ft_lstdelone()
 {
-	
+	printf("Test results for ft_lstdelone:\n");
 	t_list **mylist;
 	t_list *mylist2 = ft_lstnew(ft_strdup("out of "));
 	t_list *mylist3 = ft_lstnew(ft_strdup("context "));
@@ -654,6 +532,7 @@ void tester_ft_lstdelone()
 }
 void tester_ft_lstclear()
 {
+	printf("Test results for ft_lstclear:\n");
 	t_list **mylist;
 	t_list *mylist2 = ft_lstnew(ft_strdup("out of "));
 	t_list *mylist3 = ft_lstnew(ft_strdup("context "));
@@ -691,48 +570,90 @@ void tester_ft_lstmap()
 int main(int argc, char **argv)
 {
 	tester_ft_isalpha();
+	printf("\n-----------------------\n");
 	tester_ft_isdigit();
+	printf("\n-----------------------\n");
 	tester_ft_isalnum();
+	printf("\n-----------------------\n");
 	tester_ft_isascii();
+	printf("\n-----------------------\n");
 	tester_ft_isprint();
+	printf("\n-----------------------\n");
 	tester_ft_strlen();
+	printf("\n-----------------------\n");
 	tester_ft_memset();
+	printf("\n-----------------------\n");
 	tester_ft_bzero();
+	printf("\n-----------------------\n");
 	tester_ft_memcpy();
+	printf("\n-----------------------\n");
 	tester_ft_memmove();
+	printf("\n-----------------------\n");
 	tester_ft_strlcpy();
+	printf("\n-----------------------\n");
 	tester_ft_strlcat();
+	printf("\n-----------------------\n");
 	tester_ft_toupper();
+	printf("\n-----------------------\n");
 	tester_ft_tolower();
+	printf("\n-----------------------\n");
 	tester_ft_strchr();
+	printf("\n-----------------------\n");
 	tester_ft_strrchr();
+	printf("\n-----------------------\n");
 	tester_ft_strncmp();
+	printf("\n-----------------------\n");
 	tester_ft_memchr();
+	printf("\n-----------------------\n");
 	tester_ft_memcmp();
+	printf("\n-----------------------\n");
 	tester_ft_strnstr();
+	printf("\n-----------------------\n");
 	tester_ft_atoi(argc, argv);
+	printf("\n-----------------------\n");
 	tester_ft_calloc();
+	printf("\n-----------------------\n");
 	tester_ft_strdup(argc, argv);
+	printf("\n-----------------------\n");
 	tester_ft_substr();
+	printf("\n-----------------------\n");
 	tester_ft_strjoin(argc, argv);
+	printf("\n-----------------------\n");
 	tester_ft_strtrim(argc, argv);
+	printf("\n-----------------------\n");
 	tester_ft_split(argc, argv);
+	printf("\n-----------------------\n");
 	tester_ft_itoa();
+	printf("\n-----------------------\n");
 	tester_ft_strmapi();
+	printf("\n-----------------------\n");
 	tester_ft_striteri(argc, argv);
+	printf("\n-----------------------\n");
 	tester_ft_putchar_fd();
+	printf("\n-----------------------\n");
 	tester_ft_putstr_fd(argc, argv);
+	printf("\n-----------------------\n");
 	tester_ft_putendl_fd(argc, argv);
+	printf("\n-----------------------\n");
 	tester_ft_putnbr_fd();
+	printf("\n-----------------------\n");
 	tester_ft_lstnew();
+	printf("\n-----------------------\n");
 	tester_ft_lstadd_front();
+	printf("\n-----------------------\n");
 	tester_ft_lstsize();
+	printf("\n-----------------------\n");
 	tester_ft_lstlast();
+	printf("\n-----------------------\n");
 	tester_ft_lstadd_back();
+	printf("\n-----------------------\n");
 	tester_ft_lstdelone();
+	printf("\n-----------------------\n");
 	tester_ft_lstclear();
+	printf("\n-----------------------\n");
 	tester_ft_lstiter();
+	printf("\n-----------------------\n");
 	tester_ft_lstmap();
-
+	printf("\n-----------------------\n");
 	return (0);
 }

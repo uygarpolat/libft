@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:25:02 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 09:04:40 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 18:22:27 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,27 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_str[i] = '\0';
 	return (new_str);
 }
-/*
-#include <stdio.h>
-
-char	increase_char(unsigned int i, char c)
-{
-	(void)i;
-	return (c + 1);
-}
-
-int main()
-{
-	char	input[] = "Hello, World!";
-	char	*result;
-	
-	result = ft_strmapi(input, &increase_char);
-
-	if (result == NULL)
-		return (1);
-	printf("Original string: %s\n", input);
-	printf("Modified string: %s\n", result);
-	free(result);
-	return (0);
-}
-*/

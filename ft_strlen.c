@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 22:49:24 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 08:50:51 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 18:15:13 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%zu", ft_strlen("Hello!"));
-	return (0);
-}
-*/

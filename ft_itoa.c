@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 01:01:52 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/21 15:26:16 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 18:22:09 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,18 +84,3 @@ char	*ft_itoa(int n)
 	ft_putnbr(str, n);
 	return (str);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*str;
-	int		nbr;
-
-	nbr = 10000034;
-	str = ft_itoa(nbr);
-	printf("%s\n", ft_itoa(nbr));
-	free(str);
-	return (0);
-}
-*/

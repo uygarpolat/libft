@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 01:51:33 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/23 11:44:05 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 18:21:03 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-/*
-#include <stdio.h>
-
-int	main(int argc, char **argv)
-{
-	if (argc == 3)
-		printf("%s\n", ft_strjoin(argv[1], argv[2]));
-	return (0);
-}
-// */

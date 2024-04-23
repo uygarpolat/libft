@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 02:20:08 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/23 11:28:59 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 18:21:45 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,28 +128,3 @@ char	**ft_split(char const *s, char c)
 	str[i] = 0;
 	return (str);
 }
-
-/*
-#include <stdio.h>
-
-int	main(int argc, char **argv)
-{
-	int		i;
-	char	**str;
-
-	if (argc == 3)
-	{
-		str = ft_split(argv[1], argv[2][0]);
-		i = 0;
-		while (str[i])
-		{
-			printf("Word %d: %s\n", i + 1, str[i]);
-			i++;
-		}
-
-		printf("%d\n", str[0] == NULL);
-	}
-
-	return (0);
-}
-// */

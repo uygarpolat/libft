@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 23:20:49 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 08:46:04 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 18:13:50 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-/*
-#include <ctype.h>
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%d-%d", isalpha('A'), ft_isalpha('A'));
-	return (0);
-}
-*/

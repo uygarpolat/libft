@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 02:26:22 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/14 02:16:58 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 18:21:29 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		len--;
 	return ((char *) ft_substr(s1, 0, len));
 }
-/*
-#include <stdio.h>
-
-int	main(int argc, char**argv)
-{
-	if (argc == 3)
-		printf("%s\n", ft_strtrim(argv[1], argv[2]));
-	return (0);
-}
-*/

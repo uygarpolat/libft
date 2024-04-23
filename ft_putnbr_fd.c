@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 23:26:45 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/21 22:27:51 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 18:23:46 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(c, fd);
 	}
 }
-/*
-int main(void)
-{
-	ft_putnbr_fd(-57, 1);
-	return (0);
-}
-*/

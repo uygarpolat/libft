@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 16:02:43 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 14:35:31 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 18:19:43 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-//	printf("%s\n", ft_strnstr("12345678901234567890", "89", 8));
-//	printf("%s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 0));
-//	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0));
-	char haystack[30] = "aaabcabcd";
-	char needle[10] = "aabc";
-	printf("%s\n", ft_strnstr(haystack, needle, -1));
-	return (0);
-}
-*/

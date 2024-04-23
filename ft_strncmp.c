@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 13:40:41 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 08:59:05 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 18:19:07 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%d|%d\n", strncmp("Whynot", "Why",
-		6), ft_strncmp("Whynot", "Why", 6));
-	printf("%d|%d\n",strncmp("test\200", "test\0", 6),
-		ft_strncmp("test\200", "test\0", 6));
-	return (0);
-}
-*/

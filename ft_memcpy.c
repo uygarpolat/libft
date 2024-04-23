@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 01:51:36 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 14:18:03 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 18:15:55 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int		intsrc;
-	int		intdest;
-	char	charsrc[] = "Helloworld";
-	char	chardest[20];
-
-	intsrc = 123456;
-	ft_memcpy(&intdest, &intsrc, sizeof(int));
-	printf("Dest integer: %d\n", intdest);
-	ft_memcpy(chardest, charsrc, sizeof(charsrc));
-	printf("Dest string: %s\n", chardest);
-	return (0);
-}
-*/

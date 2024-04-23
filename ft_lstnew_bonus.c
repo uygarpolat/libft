@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:27:17 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 09:07:42 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 18:24:14 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_list->next = NULL;
 	return (new_list);
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{
-	t_list *mylist = ft_lstnew("context");
-	char* str = (char *)(mylist->content);
-	printf("%s\n", str);
-	return (0);
-}
-*/

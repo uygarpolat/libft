@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 01:51:33 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 09:02:05 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 11:44:05 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,4 @@ int	main(int argc, char **argv)
 		printf("%s\n", ft_strjoin(argv[1], argv[2]));
 	return (0);
 }
-*/
+// */

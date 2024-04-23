@@ -6,7 +6,7 @@
 #    By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/19 21:35:28 by upolat            #+#    #+#              #
-#    Updated: 2024/04/22 15:51:28 by upolat           ###   ########.fr        #
+#    Updated: 2024/04/23 13:39:07 by upolat           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,8 +72,7 @@ bonus: .bonus
 
 .bonus:		$(NAME) $(BONUS_OBJS) $(INCLUDE)
 			ar -rcs $(NAME) $(BONUS_OBJS)
-			touch .bonus
-
+			@touch .bonus
 
 .c.o:
 			cc -Wall -Werror -Wextra -c $< -o $(<:.c=.o)
@@ -83,6 +82,7 @@ clean:
 
 fclean:		clean
 			rm -f $(NAME)
+			rm -f .bonus
 
 re:			fclean all
 

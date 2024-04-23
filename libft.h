@@ -6,14 +6,13 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 22:44:36 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 20:25:23 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 16:10:44 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <sys/types.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>

@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 23:04:19 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/22 22:51:23 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 16:15:24 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static int	ft_isspace(const char c)
 
 int	ft_atoi(const char *str)
 {
-	int		sign;
-	long	nbr;
+	int			sign;
+	long long	nbr;
 
 	sign = 1;
 	nbr = 0;

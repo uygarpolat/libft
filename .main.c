@@ -335,8 +335,6 @@ void tester_ft_split(int argc, char **argv)
 			printf("Word %d: %s\n", i + 1, str[i]);
 			i++;
 		}
-
-		printf("%d\n", str[0] == NULL);
 	}
 }
 

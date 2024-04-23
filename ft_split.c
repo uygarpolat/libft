@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 02:20:08 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/23 18:21:45 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 22:45:18 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,15 +115,21 @@ char	**ft_split(char const *s, char c)
 	counter = ft_word_amount_checker(s, c, 0);
 	str = malloc(sizeof(char *) * (counter + 1));
 	if (str == NULL)
-		return (0);
-	i = 0;
+		return (NULL);
+	i = -1;
 	h = 0;
-	while (i < counter)
+	while (i++ < counter - 1)
 	{
 		len = ft_strlen_mod(s, c, h);
 		str[i] = ft_word_length_checker(s, c, h, 0);
+		if (str[i] == NULL)
+		{
+			while (--i >= 0)
+				free(str[i]);
+			free(str);
+			return (NULL);
+		}
 		h = h + len + 1;
-		i++;
 	}
 	str[i] = 0;
 	return (str);

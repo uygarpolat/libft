@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 02:20:08 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/23 22:45:18 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/23 23:41:12 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,6 @@ char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		h;
-	int		len;
 	int		counter;
 	char	**str;
 
@@ -120,7 +119,6 @@ char	**ft_split(char const *s, char c)
 	h = 0;
 	while (i++ < counter - 1)
 	{
-		len = ft_strlen_mod(s, c, h);
 		str[i] = ft_word_length_checker(s, c, h, 0);
 		if (str[i] == NULL)
 		{
@@ -129,7 +127,7 @@ char	**ft_split(char const *s, char c)
 			free(str);
 			return (NULL);
 		}
-		h = h + len + 1;
+		h = h + ft_strlen_mod(s, c, h) + 1;
 	}
 	str[i] = 0;
 	return (str);

@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 01:51:36 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/23 18:15:55 by upolat           ###   ########.fr       */
+/*   Updated: 2024/04/24 09:00:39 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	srcchar = (const char *)src;
 	while (i < n)
 	{
-		*destchar = *srcchar;
-		destchar++;
-		srcchar++;
+		destchar[i] = srcchar[i];
 		i++;
 	}
 	return (dest);

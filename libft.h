@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 22:44:36 by upolat            #+#    #+#             */
-/*   Updated: 2024/04/24 10:53:33 by upolat           ###   ########.fr       */
+/*   Updated: 2024/05/21 12:09:44 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 101
+# endif
 
 typedef struct s_list
 {
@@ -71,5 +75,17 @@ void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)
 					(void *), void (*del)(void *));
+
+// get_next_line_bonus.c
+char			*get_next_line(int fd);
+char			*process_remaining_data(char **str_static);
+char			*clean_up_static(char **str_static);
+char			*read_and_process(int fd, ssize_t *bytes_read,
+					char **str_static, char *buffer);
+int				extract_line_and_update_static(char **str_static, char **line);
+
+// get_next_line_utils_bonus.c
+char			*ft_strchr_plus(const char *str, int c);
+char			*ft_str_tillchar(char *str, int c);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/19 21:35:28 by upolat            #+#    #+#              #
-#    Updated: 2024/04/23 13:39:07 by upolat           ###   ########.fr        #
+#    Updated: 2024/05/21 12:27:46 by upolat           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,10 @@ SRCS =	./ft_isalpha.c \
 		./ft_putstr_fd.c \
 		./ft_putendl_fd.c \
 		./ft_putnbr_fd.c \
+		./get_next_line.c \
+		./get_next_line_bonus.c \
+		./get_next_line_utils.c \
+		./get_next_line_utils_bonus.c \
 
 OBJS	= $(SRCS:.c=.o)
 

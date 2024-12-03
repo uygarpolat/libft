@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 23:29:42 by upolat            #+#    #+#             */
-/*   Updated: 2024/12/03 03:42:14 by upolat           ###   ########.fr       */
+/*   Updated: 2024/12/03 16:31:48 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ int		vec_map(t_vec *dst, t_vec *src, void (*f) (void *));
 int		vec_filter(t_vec *dst, t_vec *src, bool (*f) (void *));
 int		vec_reduce(void *dst, t_vec *src, void (*f) (void *, void *));
 void	vec_sort(t_vec *src, int (*f)(void *, void *));
+void	vec_print(t_vec *src);
 
 #endif

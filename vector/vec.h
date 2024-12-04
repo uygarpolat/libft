@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 23:29:42 by upolat            #+#    #+#             */
-/*   Updated: 2024/12/04 00:58:04 by upolat           ###   ########.fr       */
+/*   Updated: 2024/12/04 02:48:47 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct s_vec
 
 int		vec_new(t_vec *src, size_t init_len, size_t elem_size);
 void	vec_free(t_vec *src);
+void	vec_free_all(t_vec *src, int flag);
 int		vec_from(t_vec *dst, void *src, size_t len, size_t elem_size);
 int		vec_resize(t_vec *src, size_t target_len);
 int		vec_clear(t_vec *src);

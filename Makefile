@@ -6,7 +6,7 @@
 #    By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/19 21:35:28 by upolat            #+#    #+#              #
-#    Updated: 2024/12/04 00:57:32 by upolat           ###   ########.fr        #
+#    Updated: 2024/12/04 02:55:06 by upolat           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,7 @@ SRCS =	./ft_isalpha.c \
 		./vector/vector.c \
 		./vector/vector_2.c \
 		./vector/vector_3.c \
+		./vector/vector_4.c \
 
 
 OBJS	= $(SRCS:.c=.o)
